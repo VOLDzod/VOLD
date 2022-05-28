@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game05</title>
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="01.css">
+    <!----===== Подключение иконок ===== -->
+
+    <!--     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Germania+One"> -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="V01.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">VOLD</span>
+                    <span class="profession">Web developer</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Topic.html">
+                            <i class='bx bx-file icon'></i>
+                            <span class="text nav-text">Topic</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="little time.html">
+                            <i class='bx bx-hourglass icon'></i>
+                            <span class="text nav-text">Little time</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Game.html">
+                            <i class='bx bx-joystick icon'></i>
+                            <span class="text nav-text">Game</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Information.html">
+                            <i class='bx bx-info-circle icon'></i>
+                            <span class="text nav-text">Information</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <style>
+        /* Google Font Import - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #10131c;
+        }
+
+        #sound {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            /*             position: absolute; */
+            top: 465px;
+            left: 15px;
+        }
+
+        #gameover {
+            position: absolute;
+            width: 400px;
+            height: 500px;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        #youwon {
+            width: 100px;
+            position: absolute;
+            top: 200px;
+            left: 150px;
+            display: none;
+        }
+
+        #youlose {
+            width: 400px;
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            display: none;
+        }
+
+        #restart {
+            position: absolute;
+            top: 310px;
+            left: 155px;
+            cursor: pointer;
+            font-size: 1.25em;
+            color: #FFF;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="sound">
+            <img src="img/SOUND_ON.png" alt="" id="sound">
+        </div>
+
+        <div id="gameover">
+            <img src="img/youwon.png" alt="" id="youwon">
+            <img src="img/gameover.png" alt="" id="youlose">
+            <div id="restart">Play Again!</div>
+        </div>
+
+        <canvas id="breakout" width="400" height="500"></canvas>
+
+        <script src="01.js"></script>
+        <script src="components.js"></script>
+        <script src="game.js"></script>
+    </body>
+
+</html>
